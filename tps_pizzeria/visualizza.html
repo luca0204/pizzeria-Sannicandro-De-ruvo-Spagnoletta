@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazione Tavolo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #f8f0df;
+            color: #3b2416;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .menu {
+            max-width: 750px;
+            margin: auto;
+            background: #fffaf0;
+            padding: 35px;
+            border: 4px double #a52a2a;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #a52a2a;
+            padding-bottom: 20px;
+            font-size: 42px;
+            color: #a52a2a;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        th, td {
+            border: 1px solid #a52a2a;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f8f0df;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            border-top: 2px solid #a52a2a;
+            padding-top: 20px;
+        }
+    </style>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param) || '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('nome').textContent = getQueryParam('nome');
+            document.getElementById('cognome').textContent = getQueryParam('cognome');
+            document.getElementById('data').textContent = getQueryParam('data');
+            document.getElementById('nPersone').textContent = getQueryParam('nPersone');
+            document.getElementById('numTel').textContent = getQueryParam('numTel');
+            document.getElementById('orario').textContent = getQueryParam('orario');
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="menu">
+
+    <h1>Prenotazione Tavolo</h1>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <td id="nome"></td>
+
+            <th>Cognome</th>
+            <td id="cognome"></td>
+        </tr>
+
+        <tr>
+            <th>Data</th>
+            <td id="data"></td>
+
+            <th>Orario</th>
+            <td id="orario"></td>
+        </tr>
+
+        <tr>
+            <th>Numero di telefono</th>
+            <td id="numTel"></td>
+
+            <th>Numero di persone</th>
+            <td id="nPersone"></td>
+        </tr>
+    </table>
+
+    <footer>
+        <p>Via Roma, 10 - Molfetta</p>
+        <p>Tel. 333 1234567</p>
+        <p><a href="menu.html">Torna al menu principale</a></p>
+    </footer>
+
+</div>
+
+</body>
+</html>

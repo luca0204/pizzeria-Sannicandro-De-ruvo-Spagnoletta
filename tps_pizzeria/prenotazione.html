@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenota Tavolo</title>
+
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #f8f0df;
+            color: #3b2416;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .menu {
+            max-width: 750px;
+            margin: auto;
+            background: #fffaf0;
+            padding: 35px;
+            border: 4px double #a52a2a;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #a52a2a;
+            padding-bottom: 20px;
+            color: #a52a2a;
+            font-size: 42px;
+        }
+
+        form {
+            margin-top: 25px;
+        }
+
+        input {
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            border-top: 2px solid #a52a2a;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="menu">
+
+    <h1>Prenota Tavolo</h1>
+
+    <form action="Visualizza.html" method="get">
+
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome"
+        placeholder="Rossi" required>
+        <br><br>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"
+        autofocus placeholder="Mario" required>
+        <br><br>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+        <br><br>
+
+        <label for="nPersone">Numero Persone:</label>
+        <input type="number" id="nPersone" name="nPersone"
+        min="1" required>
+        <br><br>
+
+        <label for="orario">Orario:</label>
+        <input type="time" id="orario" name="orario"
+        min="19:30" max="23:00" required>
+        <br><br>
+
+        <label for="numTel">Numero telefono:</label>
+        <input type="tel" id="numTel" name="numTel" required>
+        <br><br>
+
+        <button type="submit">Prenota tavolo</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <footer>
+        <p>Via Roma, 10 - Molfetta</p>
+        <p>Tel. 333 1234567</p>
+        <p><a href="menu.html">Torna al menu principale</a></p>
+    </footer>
+
+</div>
+
+</body>
+</html>
+```
